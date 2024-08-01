@@ -25,7 +25,7 @@ const LoginForm = () => {
                 console.error(response.error);
                 setError(response.error.message);
             } else {
-                router.push("/Dash");
+                router.push("/");
             }
         } catch (e) {
             console.error(e);
@@ -37,20 +37,20 @@ const LoginForm = () => {
     return (
         <>
             <form
-               className='relative z-20 flex flex-col items-center gap-6  '
+               className='relative z-20 flex flex-col  items-center gap-2 sm:gap-6 '
                 onSubmit={onSubmit}>
-                <div className='flex flex-col gap-8 rounded-lg  bg-white bg-opacity-20 backdrop-blur-lg pt-10 pb-10 px-6 w-full h-full m-20'>
-                    <h1 className="text-4xl font-semi text-white">Login</h1>
-                    <div className="flex flex-col w-full gap-4"></div>
+                <div className='flex flex-col gap-4  -mt-6 sm:mt-0 sm:gap-8 rounded-lg  bg-white bg-opacity-20 backdrop-blur-lg sm:pt-10 sm:pb-10 px-6 w-full h-full m-20'>
+                    <h1 className="text-3xl sm:text-3xl font-semi text-white">Login</h1>
+                    <div className="flex flex-col w-full gap-3 -mt-4 sm:mt-0"></div>
                    
-                        <Input className="border mx-2 border-gray-500 rounded" type="email" label="Email" name="email" id="email" />
+                        <Input className="-mt-2 sm:mt-0 " radius='xs' type="email" label="Email" name="email" id="email" />
            
-                        <Input className="border mx-2 border-gray-500 rounded" type="password"  label="Senha" name="password" id="password" />
+                        <Input className="-mt-2 sm:mt-0  " radius='xs' type="password"  label="Senha" name="password" id="password" />
                 
 
-                    <MyButton type='submit' color='radani'>LOGIN</MyButton>
-                    <div className="w-full  h-[4px]   bg-gradient-to-r from-[#ee9c2e] via-[#85adb5] to-transparent "></div>
-                    <div className="flex flex-col w-full ">
+                    <MyButton className='-mt-2 sm:mt-0' type='submit' color='radani'>LOGIN</MyButton>
+                    <div className="w-full  h-[3px]  sm:h-[4px] -mt-2 sm:mt-0 bg-gradient-to-r from-[#ee9c2e] via-[#85adb5] to-transparent "></div>
+                    <div className="flex flex-col w-full -mt-2 sm:mt-0 ">
               <MyButton onClick={() => router.push('/')} color='radani2'>Visitante</MyButton>
             </div  >
                     </div>

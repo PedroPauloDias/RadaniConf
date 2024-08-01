@@ -32,10 +32,12 @@ import Image from "next/image";
 import MyButton from "./myButton";
 import useAuth from "../app/hooks/useAuth"; 
 import Logout from "./Logout";
+import { useRouter } from "next/navigation";
 
 
 export const Navbar = () => {
   const { session } = useAuth();
+  const router = useRouter()
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky"  >
