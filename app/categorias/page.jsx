@@ -3,9 +3,7 @@ import React, { useEffect, useState } from 'react';
 import DefaultLayout from '@/layouts/default';
 import CustomSkeleton from '@/components/skeleton';
 import DisplayCard from '@/components/DisplayCard/index';
-import MyPagination from '../../../components/myPagination';
-import { getAllCategories } from '../../../services/categoryService';
-import axios from 'axios';
+import { getAllCategories } from '../../services/categoryService';
 
 export default function CategoriasPage() {
   const [categories, setCategories] = useState([]);

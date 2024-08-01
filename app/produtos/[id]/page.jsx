@@ -1,8 +1,8 @@
 "use client"
 import { useRouter } from 'next/router';
-import { getProductsById } from '../../../../services/productServices';
+import { getProductsById } from '../../../services/productServices';
 import { useEffect, useState } from 'react';
-import CustomCard from '../../../../components/customCard/index';
+import CustomCard from '../../../components/customCard/index';
 
 export default function ProdutoIndividual() {
   const router = useRouter();
