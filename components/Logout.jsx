@@ -9,7 +9,7 @@ const Logout = () => {
     <form action={doLogout}>
       <MyButton
       color="radani2"
-      size="md"
+      size="xs"
       type="submit">
         Sair
       </MyButton>

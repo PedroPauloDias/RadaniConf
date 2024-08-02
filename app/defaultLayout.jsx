@@ -62,10 +62,9 @@ export default function DefaultLayout({ children }) {
 
 
   return (
-    <div className=" flex flex-col h-full w-full gap-5  ">
-     
+    <div className=" flex flex-col h-full w-full gap-2  ">     
       <div className="flex relative ">
-       <div className="flex  max-w-2xl w-full px-4 ">        
+       <div className="flex max-w-2xl w-full px-6 ">        
        <Input
             onFocus={() => setMenuOpen(true)}
             type="Search"
@@ -79,7 +78,7 @@ export default function DefaultLayout({ children }) {
           />
         </div>
       </div>
-      <main className="container mx-auto max-w-7xl px-6 flex-grow pt-8 relative"> 
+      <main className="container mx-auto max-w-7xl px-6 flex-grow pt-2 relative"> 
         {searchResults ? (
           <>
             <SearchResultComponent
@@ -107,7 +106,7 @@ export default function DefaultLayout({ children }) {
             <WhatsAppButton />
           </div>
       </main>
-      <div className="container mx-auto max-w-7xl">
+      <div className="container mx-auto ">
         <Footer />
       </div>
     </div>

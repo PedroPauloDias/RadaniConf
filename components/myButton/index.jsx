@@ -14,7 +14,7 @@ export const MyButton = extendVariants(Button, {
       true: "bg-[#eaeaea] text-[#000] opacity-50 cursor-not-allowed dark:bg-[#555555] dark:text-[#aaa]",
     },
     size: {
-      xs: "px-2 min-w-12 h-4 text-tiny gap-1 rounded-small",
+      xs: "px-4 min-w-12 h-6 text-tiny gap-1 rounded-small",
       md: "px-4 min-w-24 h-8 text-small gap-2 rounded-small",
       xl: "px-6 min-w-28 h-10 text-large font-semi gap-4 my-2  rounded-small ",
     },

@@ -66,14 +66,14 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
+        className="hidden sm:flex basis-1/5 sm:basis-full mr-4"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
+        <NavbarItem className="hidden sm:flex gap-2 ">
         {session ? (
             <Logout />
           ) : (
-            <MyButton onClick={() => router.push('/login')} color="radani" size="sm">
+            <MyButton onClick={() => router.push('/login')} color="radani" size="xs">
               Login
             </MyButton>
           )}

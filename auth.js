@@ -16,15 +16,13 @@ export const {
   providers: [
     CredentialsProvider({
       async authorize(credentials) {
-        if (credentials === null) return null;
+        if (!credentials) return null;
         try {
           const user = getUserByEmail(credentials?.email);
           if (user) {
             const isMatch = user?.password === credentials?.password;
-
             if (isMatch) {
-              return user;
-
+              return { ...user, role: user?.role, trabalho: user?.trabalho };
             } else {
               throw new Error("invalid password");
             }
@@ -32,7 +30,7 @@ export const {
             throw new Error("user not found");
           }
         } catch (error) {
-          throw new Error(error);
+          throw new Error(error.message);
         }
       },
     }),
@@ -40,7 +38,6 @@ export const {
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-
       authorization: {
         params: {
           prompt: "consent",
@@ -48,6 +45,32 @@ export const {
           response_type: "code",
         },
       },
+      profile(profile) {
+        return {
+          id: profile.sub,
+          name: profile.name,
+          email: profile.email,
+          role: "user", // Define um valor padrão para `role`
+          // Adicione outros campos necessários, se houver
+        };
+      },
     }),
   ],
+
+  callbacks: {
+    async jwt({ token, user }) {
+      if (user) {
+        token.id = user.id;
+        token.role = user.role;
+      }
+      return token;
+    },
+    async session({ session, token }) {
+      if (token) {
+        session.user.id = token.id;
+        session.user.role = token.role;
+      }
+      return session;
+    },
+  },
 });

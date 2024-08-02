@@ -4,10 +4,7 @@ export const siteConfig = {
   name: "Radani Confecção infantil",
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
-    {
-      label: "Produtos",
-      href: "/produtos",
-    },
+  
     {
       label: "Body",
       href: "/categorias/Body",
@@ -28,10 +25,7 @@ export const siteConfig = {
       label: "Lançamentos",
       href: "/categorias/Lancamento",
     },
-    {
-      label: "Sobre nós",
-      href: "/about",
-    },
+    
   ],
   navMenuItems: [
     {

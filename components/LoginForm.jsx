@@ -39,7 +39,7 @@ const LoginForm = () => {
             <form
                className='relative z-20 flex flex-col  items-center gap-2 sm:gap-6 '
                 onSubmit={onSubmit}>
-                <div className='flex flex-col  -mt-2 sm:mt-0 gap-8 rounded-lg p-4 sm:p-0 bg-white bg-opacity-20 backdrop-blur-lg sm:pt-10 sm:pb-10 px-6 w-full h-full m-20'>
+                <div className='flex flex-col  -mt-2 sm:mt-0 gap-8 rounded-lg p-4  bg-white bg-opacity-20 backdrop-blur-lg  sm:p-8 px-6 w-full h-full m-20'>
                     <h1 className="text-3xl font-semi text-white">Login</h1>
                     <div className="flex flex-col w-full gap-3 -mt-4 sm:mt-0"></div>
                    
