@@ -18,6 +18,18 @@ export const {
       async authorize(credentials) {
         if (!credentials) return null;
         try {
+          // Verifique se é um login de visitante
+          if (
+            credentials.email === "visitante@example.com" &&
+            credentials.password === "visitante123"
+          ) {
+            return {
+              email: "visitante@example.com",
+              role: "visitante",
+              id: "visitante",
+            };
+          }
+
           const user = getUserByEmail(credentials?.email);
           if (user) {
             const isMatch = user?.password === credentials?.password;

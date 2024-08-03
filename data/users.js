@@ -1,7 +1,7 @@
 const users = [
-  { id: 1, name: "Alice", email: "alice@example.com" , password: "123", role: "user" },
+  { id: 1, name: "Visitante", email: "visitante@example.com" , password: "visitante123", role: "user" },
   { id: 2, name: "Bob", email: "bob@example.com" ,password: "123" , role: "vendedor"},
-  { id: 3, name: "Charlie", email: "charlie@example.com",password: "password2", role:"user"},
+  { id: 3, name: "Charlie", email: "charlie@example.com",password: "123", role:"user"},
 ];
 export const getUserByEmail = (email) => {
   const found = users.find((user) => user.email === email);

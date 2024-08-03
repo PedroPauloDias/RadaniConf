@@ -20,13 +20,9 @@ export const siteConfig = {
     {
       label: "Bandana",
       href: "/categorias/Bandana",
-    },
-    {
-      label: "Lançamentos",
-      href: "/categorias/Lancamento",
-    },
-    
+    },    
   ],
+  
   navMenuItems: [
     {
       label: "Body",
@@ -42,10 +38,6 @@ export const siteConfig = {
     {
       label: "Bandana",
       href: "/categorias/Bandana",
-    },
-    {
-      label: "Lançamentos",
-      href: "/categorias/Lancamento",
     },
     {
       label: "Todos os Produtos",

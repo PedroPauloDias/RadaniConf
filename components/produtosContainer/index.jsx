@@ -46,7 +46,7 @@ export default function ProdutosContainer() {
 
         {
           limitedProducts.map((produto) => (
-            <DisplayCard
+            <CustomCard
             key={produto.id}
             imagem={produto.image}
             cores={produto.cores}
