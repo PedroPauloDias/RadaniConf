@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
-import { createUser } from "@/queries/users.js";
-import { dbConnect } from "@/lib/mongo.js";
+import { createUser } from "@/app/queries/users";
+import { dbConnect } from "@/app/lib/mongo";
 import bcrypt from "bcryptjs";
 
 export const POST = async (request) => {
