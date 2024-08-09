@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import DefaultLayout from "../app/defaultLayout"
-import { dbConnect } from '../lib/mongo';
+import { dbConnect } from '@/lib/mongo';
 
 export const metadata: Metadata = {
   title: {
