@@ -24,7 +24,7 @@ const LoginForm = () => {
             doCredentialLogin(formData),
             {
                 loading: 'Logging in...',
-                success: 'Login successful!',
+                success: 'sucesso!',
                 
             },
             {

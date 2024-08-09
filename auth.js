@@ -2,6 +2,8 @@ import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { getUserByEmail } from "./data/users";
+import { User } from "@/app/model/user-model"
+import  bcrypt  from 'bcryptjs';
 
 export const {
   handlers: { GET, POST },
@@ -30,11 +32,17 @@ export const {
             };
           }
 
-          const user = getUserByEmail(credentials?.email);
+          const user = await User.findOne({
+            email: credentials?.email
+          });
+
           if (user) {
-            const isMatch = user?.password === credentials?.password;
+            const isMatch = await bcrypt.compare(
+                credentials?.password,
+                user?.password
+            );
             if (isMatch) {
-              return { ...user, role: user?.role, trabalho: user?.trabalho };
+              return { ...user, role: user?.role };
             } else {
               throw new Error("invalid password");
             }
