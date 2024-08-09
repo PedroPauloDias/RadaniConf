@@ -24,7 +24,7 @@ export default function Register() {
       console.log(email)
       console.log(password)
 
-      const response = await fetch('/api/register', {
+      const response = await fetch(`api/register`, {
         method: 'POST',
         headers: {
           "content-type": "application/json",
