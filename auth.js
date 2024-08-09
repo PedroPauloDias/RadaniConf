@@ -62,13 +62,12 @@ export const {
           id: profile.sub,
           name: profile.name,
           email: profile.email,
-          role: "user", // Define um valor padrão para `role`
-          // Adicione outros campos necessários, se houver
+          role: "user", 
         };
       },
     }),
   ],
-
+  secret: process.env.NEXTAUTH_SECRET,
   callbacks: {
     async jwt({ token, user }) {
       if (user) {

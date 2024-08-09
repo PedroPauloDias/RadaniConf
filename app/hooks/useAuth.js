@@ -7,6 +7,8 @@ const useAuth = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
+
+
   useEffect(() => {
     const checkAuth = async () => {
       try {

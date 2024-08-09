@@ -7,7 +7,7 @@ import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import DefaultLayout from "../app/defaultLayout"
-
+import { dbConnect } from '@/lib/mongo';
 
 export const metadata: Metadata = {
   title: {
@@ -27,11 +27,12 @@ export const viewport: Viewport = {
   ],
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+  }) {
+  const conn = await dbConnect();
   return (
     <html suppressHydrationWarning lang="en">
       <head />

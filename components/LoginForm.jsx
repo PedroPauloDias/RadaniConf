@@ -9,6 +9,7 @@ import { useRouter } from "next/navigation";
 import { MyButton } from './myButton/index';
 import { Input } from "@nextui-org/react";
 import { toast, Toaster } from 'react-hot-toast';
+import Link from 'next/link';
 
 
 const LoginForm = () => {
@@ -98,7 +99,12 @@ const LoginForm = () => {
                         <div className="flex flex-col w-full -mt-2 sm:mt-0 ">
                             <MyButton type='submit' onClick={handleVisitorLogin} color='radani2'>Visitante</MyButton>
                         </div  >
+                    <div className='w-full bg-pink text-white'>
+      <Link href="/register" >
+      <p>registre-se</p>
+      </Link>
                     </div>
+      </div>
 
                 </form>
                 {/* <SocialLogin /> */}
