@@ -16,35 +16,29 @@ const LoginForm = () => {
     const router = useRouter();
     const [error, setError] = useState("");
 
+   
+
+
     async function onSubmit(event) {
         event.preventDefault();
-        const formData = new FormData(event.currentTarget);
-        
-        toast.promise(
-            doCredentialLogin(formData),
-            {
-                loading: 'Logging in...',
-                success: 'sucesso!',
-                
-            },
-            {
-                duration: 6000,
-            }
-        ).then(response => {
+        try {
+            const formData = new FormData(event.currentTarget);
+            console.log("FORMDATA",formData);
+
+            const response = await doCredentialLogin(formData);
+
             if (response.error) {
                 console.error(response.error);
                 setError(response.error.message);
             } else {
-                // Adiciona um atraso antes de redirecionar
-                setTimeout(() => {
-                    router.push("/");
-                }, 2000); // Atraso de 2 segundos
+                router.push("/");
             }
-        }).catch(err => {
-            console.error(err);
-        });
+        } catch (e) {
+            console.error(e);
+            setError("Check your Credentials");
+        }
     }
-    
+
   
 
     async function handleVisitorLogin() {
@@ -68,7 +62,7 @@ const LoginForm = () => {
                 setError(response.error.message);
             } else {
                 setTimeout(() => {
-                    router.replace("/");
+                    router.push("/");
                 }, 3000); 
             }
         }).catch(err => {
@@ -99,11 +93,7 @@ const LoginForm = () => {
                         <div className="flex flex-col w-full -mt-2 sm:mt-0 ">
                             <MyButton type='submit' onClick={handleVisitorLogin} color='radani2'>Visitante</MyButton>
                         </div  >
-                    <div className='w-full bg-pink text-white'>
-      <Link href="/register" >
-      <p>registre-se</p>
-      </Link>
-                    </div>
+  
       </div>
 
                 </form>
