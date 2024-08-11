@@ -27,7 +27,7 @@ export const {
           ) {
             return {
               email: "visitante@example.com",
-              role: "admin",
+              role: "visitante",
               id: "visitante",
             };
           }
