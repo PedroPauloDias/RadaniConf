@@ -55,7 +55,7 @@ console.log(imagens)
               w-full flex items-center justify-center p-8 
                   `}
               onClick={() => {
-                setImagemPrincipal(imagem);
+                setImagemPrincipal(imagem.url);
                 setCurrentIndex(index);
               }}
             >
