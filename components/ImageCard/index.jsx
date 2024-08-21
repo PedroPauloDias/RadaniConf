@@ -8,9 +8,9 @@ import {SwiperSlide } from 'swiper/react';
 
 
 export default function ImageCard({ imagens, loading }) {
-  const [imagemPrincipal, setImagemPrincipal] = useState(imagens[0]);
+  const [imagemPrincipal, setImagemPrincipal] = useState(imagens[0].url);
   const [currentIndex, setCurrentIndex] = useState(0);
-
+console.log(imagens)
 
   const settings = {
     spaceBetween: 1,
@@ -60,7 +60,7 @@ export default function ImageCard({ imagens, loading }) {
               }}
             >
               <Image
-                src={imagem}
+                src={imagem.url}
                 alt={`Thumbnail ${index + 1}`}
                 width={100}
                 height={60}

@@ -23,7 +23,6 @@ const LoginForm = () => {
         event.preventDefault();
         try {
             const formData = new FormData(event.currentTarget);
-            console.log("FORMDATA",formData);
 
             const response = await doCredentialLogin(formData);
 
@@ -35,7 +34,7 @@ const LoginForm = () => {
             }
         } catch (e) {
             console.error(e);
-            setError("Check your Credentials");
+            setError("verifique os dados e tente novamente");
         }
     }
 
@@ -50,7 +49,7 @@ const LoginForm = () => {
         doCredentialLogin(formData),
             {
               loading: 'Login...',
-              success: <b>Settings saved!</b>,
+              success: <b>Bem vindo!</b>,
               error: <b>Could not save.</b>,
             },
             {

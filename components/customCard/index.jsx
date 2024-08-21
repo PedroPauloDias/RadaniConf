@@ -7,6 +7,8 @@ import ImageCard from './../ImageCard/index';
 
 
 export default function CustomCard({ imagem, cores, titulo, descricao, tamanho, cod, referencia, descButton, classe, id, modalTitle, loading }) {
+console.log("IMAGEM DO CUSTOM", imagem)
+console.log("CORES DO CUSTOM", cores)
 
   if (loading) {
     return <CustomSkeleton />;
@@ -24,7 +26,7 @@ export default function CustomCard({ imagem, cores, titulo, descricao, tamanho, 
         <Image
           alt="Card background"
           className="w-full object-cover rounded-md"
-          src={imagem}
+          src={imagem.url}
           width={270}
           height={300}
           loading='lazy'
@@ -55,7 +57,7 @@ export default function CustomCard({ imagem, cores, titulo, descricao, tamanho, 
                   <Image
                     alt="Card background"
                     className="w-full object-cover rounded-md  "
-                    src={imagem}
+                    src={imagem.url}
                     width={270}
                     height={300}
                     loading='lazy'

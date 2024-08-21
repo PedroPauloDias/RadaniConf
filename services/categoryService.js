@@ -13,7 +13,7 @@ export async function getAllCategories(page, pageSize) {
     // Processar a resposta conforme necessário, incluindo totalPages se aplicável
     const data = response.data.data; // Dados da lista de categorias
     const totalPages = response.data.totalPages; // Total de páginas
-
+console.log("DADOS DA CATEGORIA : ", data)
     return { data, totalPages };
   } catch (error) {
     console.error('Erro ao buscar categorias:', error);

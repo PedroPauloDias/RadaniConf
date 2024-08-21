@@ -15,6 +15,7 @@ export default function Categoria() {
   const [totalPages, setTotalPages] = useState(1);
   const topRef = useRef(null); 
 
+
   useEffect(() => {
     async function fetchCategoriesByTag(page) {
       try {
@@ -46,13 +47,13 @@ export default function Categoria() {
     setCurrentPage(pageNumber); // Atualiza currentPage ao mudar de página
   }
 
-  const sortedCategories = [...categories].sort((a, b) => {
-    const refA = parseInt(a.ref, 10);
-    const refB = parseInt(b.ref, 10);
-    return refA - refB;
-  });
+  // const sortedCategories = [...categories].sort((a, b) => {
+  //   const refA = parseInt(a.ref, 10);
+  //   const refB = parseInt(b.ref, 10);
+  //   return refA - refB;
+  // });
 
-  console.log('sortedCategories', sortedCategories);
+  // console.log('sortedCategories', sortedCategories);
   
   return (
     <>
