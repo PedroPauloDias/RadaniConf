@@ -15,7 +15,7 @@ export default function LancamentoContainer() {
 
   const  {session}  = useAuth();
 
-console.log("DADOS DA SESSAO", session?.user?.email)
+console.log("DADOS DA SESSAO", session?.user?.role)
   //const topRef = useRef()
 
   useEffect(() => {
