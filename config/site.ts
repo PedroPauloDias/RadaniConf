@@ -10,16 +10,16 @@ export const siteConfig = {
       href: "/categorias/Body",
     },
     {
-      label: "Mijão",
-      href: "/categorias/Mijao",
+      label: "Conjuntos",
+      href: "/categorias/conjunto",
     },
     {
       label: "Pagão",
       href: "/categorias/Pagao",
     },
     {
-      label: "Bandana",
-      href: "/categorias/Bandana",
+      label: "Lançamento",
+      href: "/categorias/lancamento",
     },    
   ],
   

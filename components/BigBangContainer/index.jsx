@@ -56,7 +56,7 @@ console.log("DADOS DA SESSAO", session?.user?.role)
                   cores={produto.cores}
                   titulo={produto.name}
                   descricao={produto.description}
-                  tamanho={produto.tamanho}
+                  tamanho={produto.sizes}
                   referencia={produto.ref}
                   classe='id'
                   id={produto.id}

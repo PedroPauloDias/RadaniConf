@@ -51,7 +51,7 @@ export default function SearchResultComponent({
                 cores={produto.cores}
                 titulo={produto.name}
                 descricao={produto.description}
-                tamanho={produto.tamanho}
+                tamanho={produto.sizes}
                 referencia={produto.ref}
                 id={produto.id}
                 modalTitle={"Detalhes do " + produto.name}
