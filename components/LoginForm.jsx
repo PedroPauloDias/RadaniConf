@@ -2,7 +2,7 @@
 
 import SocialLogin from "./SocialLogin";
 
-import { doCredentialLogin } from "../app/actions";
+import  {doCredentialLogin}  from "../app/actions";
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
@@ -16,14 +16,10 @@ const LoginForm = () => {
     const router = useRouter();
     const [error, setError] = useState("");
 
-
-
-
     async function onSubmit(event) {
         event.preventDefault();
         try {
             const formData = new FormData(event.currentTarget);
-
             const response = await doCredentialLogin(formData);
 
             if (response.error) {
@@ -37,8 +33,6 @@ const LoginForm = () => {
             setError("verifique os dados e tente novamente");
         }
     }
-
-
 
     async function handleVisitorLogin() {
         const formData = new FormData();

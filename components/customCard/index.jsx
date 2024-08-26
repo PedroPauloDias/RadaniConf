@@ -7,15 +7,12 @@ import ImageCard from './../ImageCard/index';
 
 
 export default function CustomCard({ imagem, cores, titulo, descricao, tamanho, cod, referencia, descButton, classe, id, modalTitle, loading }) {
-console.log("IMAGEM DO CUSTOM", imagem)
-console.log("CORES DO CUSTOM", cores)
+
 
   if (loading) {
     return <CustomSkeleton />;
   }
   
-
-
   return (
     <Card className="py-4 p-2 rounded-md ">
       <CardHeader className=" p-4 flex-col items-start  ">

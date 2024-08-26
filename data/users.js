@@ -1,12 +1,18 @@
-const users = [
-  { id: 1, name: "Visitante", email: "visitante@example.com" , password: "visitante123", role: "user" },
-  { id: 2, name: "Bob", email: "bob@example.com" ,password: "123" , role: "vendedor"},
-  { id: 3, name: "Charlie", email: "charlie@example.com",password: "123", role:"user"},
-];
-export const getUserByEmail = (email) => {
-  const found = users.find((user) => user.email === email);
-  return found;
+import { dbConnect } from '@/app/lib/mongo';
+import  User from '@/app/model/user-model';
+
+export const getUserByEmail = async (email) => {
+  await dbConnect();
+  console.log('Getting user by email:', email);
+
+  const user = await User.findOne({
+    email: email // Use `email` directly
+  });
+
+  console.log('User',user)
+  return user;
 };
+
 
 export const getSession = async (req) => {
   const session = await getSession({ req });

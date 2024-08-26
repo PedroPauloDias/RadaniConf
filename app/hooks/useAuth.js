@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
@@ -7,13 +8,12 @@ const useAuth = () => {
   const [loading, setLoading] = useState(true);
   const router = useRouter();
 
-
-
   useEffect(() => {
     const checkAuth = async () => {
       try {
         const response = await axios.get('/api/auth/session');
         if (response.data?.user) {
+          console.log('Auth session', response.data)
           setSession(response.data);
         } else {
           router.push('/login');

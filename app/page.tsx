@@ -1,11 +1,12 @@
 
-import DefaultLayout from "@/layouts/default";
 import HeroHeader from './../components/HeroHeader/index';
 import ProdutosContainer from '../components/produtosContainer/index';
 import CategoriasContainer from '../components/CategoriasContainer/index';
-import LancamentoContainer from "../components/LancamentoContainer/index";
-import WhatsAppButton from "@/components/whatsAppButton";
+import BigBangContainer from '../components/BigBangContainer/index';
 export default function Home() {
+
+
+
   return (
     <>
       <HeroHeader />
@@ -14,7 +15,7 @@ export default function Home() {
         </div>
         <CategoriasContainer />
         <ProdutosContainer />
-        <LancamentoContainer />
+        <BigBangContainer />
       </section>
   </>
   );

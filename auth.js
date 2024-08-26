@@ -1,8 +1,8 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { getUserByEmail } from "./data/users";
-import { User } from "@/app/model/user-model"
+import { getUserByEmail } from "@/data/users";
+import  User from "@/app/model/user-model"
 import  bcrypt  from 'bcryptjs';
 
 export const {
@@ -20,21 +20,17 @@ export const {
       async authorize(credentials) {
         if (!credentials) return null;
         try {
-          // Verifique se é um login de visitante
-          if (
-            credentials.email === "visitante@example.com" &&
-            credentials.password === "visitante123"
-          ) {
-            return {
-              email: "visitante@example.com",
-              role: "visitante",
-              id: "visitante",
-            };
-          }
+        
 
-          const user = await User.findOne({
-            email: credentials?.email
-          });
+          const user = await getUserByEmail(credentials?.email); 
+    
+          
+          // const user = await User.findOne({
+          //   email: credentials?.email
+          // });
+
+        
+          
 
           if (user) {
             const isMatch = await bcrypt.compare(
@@ -81,12 +77,15 @@ export const {
       if (user) {
         token.id = user.id;
         token.role = user.role;
+        token.email = token.email;
+
       }
       return token;
     },
     async session({ session, token }) {
       if (token) {
         session.user.id = token.id;
+        session.user.email = token.email;
         session.user.role = token.role;
       }
       return session;

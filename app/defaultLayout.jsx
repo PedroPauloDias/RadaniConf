@@ -27,7 +27,7 @@ export default function DefaultLayout({ children }) {
     try {
       setLoading(true);
       const response = await getSearchProduct(query, page);
-      console.log("Resposta da busca:", response);
+      console.log("Resposta da busca:", response.produtos);
 
       setSearchResults(response.produtos);
       setTotalPages(response.totalPages);
@@ -51,10 +51,7 @@ export default function DefaultLayout({ children }) {
   
   useEffect(() => {
     if (searchResults) {
-      console.log("Sessão:", session);
-      let filtered = searchResults;
-        filtered = searchResults.filter(searchResult => searchResult.tag && !searchResult.tag === "Lancamento");
-
+      let filtered = searchResults.filter(searchResult => searchResult.tag !== "BigBang");
       setFilteredSearch(filtered);
       console.log("Pesquisa Filtrada:", filtered);
     }

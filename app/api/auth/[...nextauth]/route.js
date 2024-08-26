@@ -11,4 +11,4 @@ const corsOptions = {
   optionsSuccessStatus: 200,
 };
 
-export { GET, POST } from "../../../../auth";
+export { GET, POST } from "@/auth";

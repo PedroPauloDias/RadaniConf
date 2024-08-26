@@ -9,7 +9,7 @@ import useAuth from '../hooks/useAuth';
 export default function Produtos() {
   const [produtos, setProdutos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [filteredProductNames, setFilteredProductNames] = useState([]);
+  const [edProductNames, setFilteredProductNames] = useState([]);
 
   const  {session}  = useAuth();
 
@@ -37,7 +37,7 @@ export default function Produtos() {
       let produtosFiltrados = produtos;
         produtosFiltrados = produtos.filter(produto => {
           // Verifica se a tag está definida e é uma string antes de fazer a comparação
-          return produto.tag && produto.tag !== "Lancamento";
+          return produto.tag && produto.tag !== "BigBang";
         });     
 
       // Log para verificar os produtos filtrados

@@ -27,6 +27,7 @@ export default function CategoriasContainer() {
 
   return (
     <div className='w-full flex flex-col gap-2 my-8'>
+      
       <div className='pointer'>
      <button onClick={() => router.push(`/categorias`)} className={title({ size: "sm", })}  >Categorias</button>
       </div>
