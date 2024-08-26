@@ -20,9 +20,9 @@ console.log("DADOS DA SESSAO", session?.user?.role)
     async function fetchCategoriesByTag() {
       try {
         setLoading(true);
-        const response = await getProductsByTag('Lancamento');
+        const response = await getProductsByTag('lancamento');
         setProdutos(response.produtos);
-        setLoading(false);       // Após atualizar os dados, rola de volta para o topo da página
+        setLoading(false);       
         if (topRef.current) {
           topRef.current.scrollIntoView({ behavior: 'smooth' });
         }
