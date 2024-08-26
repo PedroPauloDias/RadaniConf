@@ -3,7 +3,7 @@ import HeroHeader from './../components/HeroHeader/index';
 import ProdutosContainer from '../components/produtosContainer/index';
 import CategoriasContainer from '../components/CategoriasContainer/index';
 import BigBangContainer from '../components/BigBangContainer/index';
-import LancamentoContainer from './../components/LancamentoContainer/index';
+import LancamentoContainer from '@/components/LancamentoContainer';
 export default function Home() {
 
 
