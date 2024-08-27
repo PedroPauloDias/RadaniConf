@@ -20,7 +20,7 @@ console.log("DADOS DA SESSAO", session?.user?.role)
     async function fetchCategoriesByTag() {
       try {
         setLoading(true);
-        const response = await getProductsByTag('lancamento');
+        const response = await getProductsByTag('Lancamento');
         setProdutos(response.produtos);
         setLoading(false);       
         if (topRef.current) {

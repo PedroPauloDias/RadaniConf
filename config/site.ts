@@ -19,7 +19,7 @@ export const siteConfig = {
     },
     {
       label: "Lançamento",
-      href: "/categorias/lancamento",
+      href: "/categorias/Lancamento",
     },    
   ],
   
