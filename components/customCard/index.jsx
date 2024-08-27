@@ -40,7 +40,7 @@ export default function CustomCard({ imagem, cores, titulo, descricao, tamanho, 
                     <p className="font-bold text-large lg:text-lg">Nome: {titulo}</p>
                     <p className="text-tiny font-bold lg:text-lg">Descrição: {descricao}</p>
                     <p className="text-tiny font-bold lg:text-lg">Tamanho: {tamanho}</p>
-                    <p className="text-tiny font-bold lg:text-lg" >Nº de referência: {referencia}</p>
+                    <p className="text-tiny font-bold lg:text-lg" >Ref: {referencia}</p>
                   </div>
                 </CardBody>
               </div>
