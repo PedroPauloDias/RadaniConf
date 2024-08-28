@@ -73,7 +73,8 @@ export default function DefaultLayout({ children }) {
   }, [query]);
 
   return (
-    <div className="flex flex-col h-full w-full gap-2">
+    <div className="flex flex-col h-full w-full gap-2 ">
+      <Navbar />
       <div className="flex relative">
         <div className="flex max-w-2xl w-full px-6">
           <Input
@@ -129,11 +130,9 @@ export default function DefaultLayout({ children }) {
             </>
           ) : (children)
         )}
-        <div className="flex gap-2 justify-end z-50 sticky bottom-3 cursor-pointer">
-          <WhatsAppButton />
-        </div>
+       
       </main>
-      <div className="container mx-auto">
+      <div className="w-full">
         <Footer />
       </div>
     </div>

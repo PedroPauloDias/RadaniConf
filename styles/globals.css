@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+header {
+  max-width: 100% !important;
+  justify-items: space-between ;
+  align-items: center;
+}

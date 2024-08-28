@@ -8,6 +8,7 @@ import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import DefaultLayout from "../app/defaultLayout"
 import { dbConnect } from '@/app/lib/mongo';
+import WhatsAppButton from "@/components/whatsAppButton";
 
 export const metadata: Metadata = {
   title: {
@@ -43,15 +44,18 @@ export default async function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen ">
-            <Navbar />
-            <main className="container mx-auto max-w-7xl  px-6 mt-2  flex-grow ">
+          <div className="relative flex flex-col h-screen  ">
+            
+            <main className=" mt-2  flex-grow ">
             <DefaultLayout>
               {children}
             </DefaultLayout>
             </main>
 
           </div>
+            <div className="flex gap-2 justify-end mr-4 z-50 fixed bottom-2 right-1  cursor-pointer ">
+          <WhatsAppButton />
+        </div>
         </Providers>
       </body>
     </html>

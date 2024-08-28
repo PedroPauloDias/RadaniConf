@@ -9,7 +9,7 @@ import logo from '../../public/logoRadani.png'
 export const Footer = () => {
   return (
     <footer className="w-full flex flex-col items-center justify-center py-3  ">
-      <div className="w-full   items-center justify-around bg-foreground p-8  ">
+      <div className="w-full   items-center justify-around bg-[#868c8d] p-8  ">
         <div className='text-foreground-50 sm:flex justify-center items-center '>
           <div className='hidden sm:block '>
             <Image alt="Logo" src={logo} width={300} height={300} />

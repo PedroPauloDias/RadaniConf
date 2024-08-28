@@ -1,8 +1,8 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Radani Confecção infantil",
-  description: "Confecção de roupa infantil",
+  name: "Radani Confecção de roupa infantil",
+  description: "Confecção de roupa infantil em Porangaba-SP",
   navItems: [
   
 

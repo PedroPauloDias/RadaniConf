@@ -41,7 +41,7 @@ export const Navbar = () => {
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky"  >
-      <NavbarContent className="basis-1/5 sm:basis-full px-4" justify="start">
+      <NavbarContent className="basis-1/5 sm:basis-full " justify="start">
         <NavbarBrand className="gap-3 max-w-28 sm:max-w-40  min-w-32  ">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Image src={LogoRadani} height={200} width={350} alt='Logo da empresa Radani' />
@@ -60,13 +60,15 @@ export const Navbar = () => {
               >
                 {item.label}
               </NextLink>
+
+              
             </NavbarItem>
           ))}
         </div>
       </NavbarContent>
 
       <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full mr-4"
+        className="hidden sm:flex basis-1/5 sm:basis-full mr-4 "
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2 ">

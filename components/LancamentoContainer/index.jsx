@@ -9,8 +9,6 @@ import useAuth from '@/app/hooks/useAuth';
 export default function LancamentoContainer() {
   const [produtos, setProdutos] = useState([])
   const [loading, setLoading] = useState(true);
-
-
   const  {session}  = useAuth();
 
 console.log("DADOS DA SESSAO", session?.user?.role)
@@ -36,8 +34,6 @@ console.log("DADOS DA SESSAO", session?.user?.role)
 
   return (
     <>
-    
-     
         <div className='w-full flex flex-col gap-2 my-8'>
           <h2 className={title({ size: "sm" })}>Lançamentos</h2>
           <div className="w-full h-[4px] mb-8 bg-gradient-to-r from-[#ee9c2e] via-[#85adb5] to-transparent">
