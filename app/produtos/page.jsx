@@ -9,7 +9,7 @@ import useAuth from '../hooks/useAuth';
 export default function Produtos() {
   const [produtos, setProdutos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [edProductNames, setFilteredProductNames] = useState([]);
+  const [filteredProductNames, setFilteredProductNames] = useState([]);
 
   const  {session}  = useAuth();
 
@@ -18,7 +18,9 @@ export default function Produtos() {
       try {
         const response = await getAllProducts();
         console.log("Produtos:", response.data);
+        console.log("PRODUTO_OBS",response.data.obs)
         setProdutos(response.data);
+        console.log("OKKKKK",produtos.obs)
         setLoading(false);
 
 
@@ -59,6 +61,7 @@ export default function Produtos() {
           ) : (
             session?.user?.role === 'vendedor' ? (
               produtos.map((produto) => (
+
                 <CustomCard
                   key={produto.id}
                   imagem={produto.image}
@@ -67,12 +70,14 @@ export default function Produtos() {
                   descricao={produto.description}
                   tamanho={produto.sizes}
                   referencia={produto.ref}
+                  obs={produto.obs}
                   descButton='ver mais'
                   classe='id'
                   id={produto.id}
                   modalTitle={'Detalhes do ' + produto.name}
                   loading={loading}
                 />
+
               ))
             ) : (
               filteredProductNames.map((produto) => (
@@ -84,6 +89,7 @@ export default function Produtos() {
                   descricao={produto.description}
                   tamanho={produto.sizes}
                   referencia={produto.ref}
+                  obs={produto.obs}
                   descButton='ver mais'
                   classe='id'
                   id={produto.id}

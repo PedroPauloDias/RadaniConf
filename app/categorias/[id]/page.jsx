@@ -76,7 +76,9 @@ export default function Categoria() {
                 tamanho={category.sizes}
                 referencia={category.ref}
                 tag={category.tag}
+                obs={category.obs}
                 descButton='ver mais'
+
                 classe='tag'
                 id={category.tag}
                 modalTitle={'Detalhes do ' + category.name}

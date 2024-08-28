@@ -53,7 +53,8 @@ export default function ProdutosContainer() {
             titulo={produto.name}
             descricao={produto.description}
             tamanho={produto.tamanho}
-            referencia={produto.ref}
+              referencia={produto.ref}
+              obs={produto.obs}
             classe='id'
             id={produto._id}
             modalTitle={'Detalhes do ' + produto.name}

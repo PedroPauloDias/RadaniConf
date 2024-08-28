@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Radani Confecção infantil",
-  description: "Make beautiful websites regardless of your design experience.",
+  description: "Confecção de roupa infantil",
   navItems: [
   
     {
@@ -10,16 +10,16 @@ export const siteConfig = {
       href: "/categorias/Body",
     },
     {
-      label: "Conjuntos",
-      href: "/categorias/conjunto",
+      label: "Lançamentos",
+      href: "/categorias/Lancamento",
     },
     {
       label: "Pagão",
       href: "/categorias/Pagao",
     },
     {
-      label: "Lançamento",
-      href: "/categorias/Lancamento",
+      label: "Produtos",
+      href: "/produtos",
     },    
   ],
   

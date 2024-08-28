@@ -53,11 +53,12 @@ export default function ProdutoIndividual() {
         <CustomCard
           
           imagem={produto.image}
-            titulo={produto.name}
-            cores={produto.cores}
+          titulo={produto.name}
+          cores={produto.cores}
           descricao={produto.description}
           tamanho={produto.sizes}
           referencia={produto.ref}
+          obs={produto.obs}
           descButton='ver mais'
           classe='id'
           id={produto.id}

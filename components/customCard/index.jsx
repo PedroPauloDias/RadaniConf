@@ -6,9 +6,9 @@ import CustomSkeleton from '../skeleton';
 import ImageCard from './../ImageCard/index';
 
 
-export default function CustomCard({ imagem, cores, titulo, descricao, tamanho, cod, referencia, descButton, classe, id, modalTitle, loading }) {
+export default function CustomCard({ imagem, cores, titulo, descricao, tamanho, cod, referencia, descButton, classe, id, obs ,modalTitle, loading }) {
 
-
+  console.log("OBS",obs)
   if (loading) {
     return <CustomSkeleton />;
   }
@@ -41,6 +41,8 @@ export default function CustomCard({ imagem, cores, titulo, descricao, tamanho, 
                     <p className="text-tiny font-bold lg:text-lg">Descrição: {descricao}</p>
                     <p className="text-tiny font-bold lg:text-lg">Tamanho: {tamanho}</p>
                     <p className="text-tiny font-bold lg:text-lg" >Ref: {referencia}</p>
+                    {obs && obs.trim() !== "" && <p className="text-tiny font-semi text-zinc-400 lg:text-lg">obs: {obs}</p>}
+
                   </div>
                 </CardBody>
               </div>
@@ -66,6 +68,8 @@ export default function CustomCard({ imagem, cores, titulo, descricao, tamanho, 
                     <p className="text-tiny font-bold md:text-lg">Descrição: {descricao}</p>
                     <p className="text-tiny font-bold md:text-lg">Tamanho: {tamanho}</p>
                     <p className="text-tiny font-bold md:text-lg">Ref: {referencia}</p>
+                    {obs && obs.trim() !== "" && <p className="text-tiny font-semi lg:text-lg">obs: {obs}</p>}
+
                     {/* <small className="text-default-500">Código: {cod}</small> */}
                   </div>
                 </CardBody>
