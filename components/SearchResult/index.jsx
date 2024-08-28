@@ -53,6 +53,7 @@ export default function SearchResultComponent({
                 descricao={produto.description}
                 tamanho={produto.sizes}
                 referencia={produto.ref}
+                obs={produto.obs}
                 id={produto.id}
                 modalTitle={"Detalhes do " + produto.name}
                 loading={loading}

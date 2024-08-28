@@ -58,6 +58,7 @@ console.log("DADOS DA SESSAO", session?.user?.role)
                   descricao={produto.description}
                   tamanho={produto.sizes}
                   referencia={produto.ref}
+                  obs={produto.obs}
                   classe='id'
                   id={produto.id}
                   modalTitle={'Detalhes do ' + produto.name}

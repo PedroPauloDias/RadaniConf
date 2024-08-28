@@ -4,10 +4,10 @@ import Image from "next/image";
 import banner2 from '../../public/banner2.jpeg'
 import { Navbar } from "@/components/navbar";
 
-export default function DocsPage() {
+export default function Sobre() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <section className="flex flex-col items-center justify-center gap-4 p-4 py-8 xl:py-10 xl:flex-row xl:gap-16 xl:mt-32">
         <div className=" w-full max-w-2xl  flex items-center justify-center text-white">
           <Image src={banner2} alt="Descrição da imagem" width={1800} height={600} className='rounded-xl mb-8' />
@@ -18,12 +18,12 @@ export default function DocsPage() {
             <div className="w-full  h-[4px] mb-8 mt-4  bg-gradient-to-r from-[#ee9c2e] via-[#85adb5] to-transparent       xl:mt-8 xl:mb-0"><div></div></div>
           </div>
 
-          <p className="text-left xl:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et eaque esse laboriosam, dolorem deserunt error cum omnis, suscipit amet molestias itaque commodi est corporis aperiam mollitia quos, neque ipsum maxime.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ratione, laborum recusandae ad, facere necessitatibus praesentium totam error nostrum minus quae! Rerum, iste odio officiis eligendi fuga deserunt blanditiis velit!
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam ab veniam suscipit voluptatem, doloremque veritatis optio? Dolores, est quas. Eveniet doloremque hic, natus fugiat aperiam quaerat quis reprehenderit repellendus laudantium.
+          <p className="text-left text-bold xl:text-xl">
+            A empresa Radani Confecções Ltda, foi fundada em 03/02/1993 e está cadastrada no segmento de Confecções de Roupas infantis com o CNPJ 96.201.785/0001-30. No mercado, a empresa está localizada na Rua Joao Rosa de Oliveira, Nº 59 no bairro Centro em Porangaba - SP, CEP 18260-000.
+            Nossos produtos são comercializado nas regiões Norte, Nordeste, Centro-Oeste, Sudeste e Sul.
           </p>
         </div>
       </section>
-      </>
+    </>
   );
 }
