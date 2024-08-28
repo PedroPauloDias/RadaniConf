@@ -5,10 +5,15 @@ import { title } from '../primitives';
 import { getAllCategories } from '../../services/categoryService';
 import DisplayCard from '../DisplayCard/index';
 import CustomSkeleton from '../skeleton'; 
+import useAuth from '@/app/hooks/useAuth';
 
 export default function CategoriasContainer() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [filteredCategories, setFilteredCategories] = useState([])
+  
+  const  {session}  = useAuth();
+
 
   useEffect(() => {
     async function fetchCategories() {
@@ -25,6 +30,23 @@ export default function CategoriasContainer() {
     fetchCategories();
   }, []);
 
+
+  
+  useEffect(() => {
+    if (categories.length > 0) {
+      console.log("Sessão:", session);
+      let categoriasFiltradas = categories;
+      categoriasFiltradas = categories.filter(categorie => {
+          // Verifica se a tag está definida e é uma string antes de fazer a comparação
+          return categorie.tag && categorie.tag !== "BigBang";
+        });     
+
+      // Log para verificar os produtos filtrados
+      console.log("Produtos Filtrados:", categoriasFiltradas);
+      setFilteredCategories(categoriasFiltradas)
+    }
+  }, [categories, session]);
+
   return (
     <div className='w-full flex flex-col gap-2 my-8'>
       
@@ -38,7 +60,8 @@ export default function CategoriasContainer() {
           // Renderiza o esqueleto enquanto está carregando
           <CustomSkeleton />
         ) : (
-          // Mapeia as categorias para exibir os cards
+            // Mapeia as categorias para exibir os cards
+            session?.user?.role === 'vendedor' ? (
           categories.map(category => (
             <DisplayCard 
               key={category.id}
@@ -49,6 +72,18 @@ export default function CategoriasContainer() {
               tag={category.tag}
             />
           ))
+            ) : (
+              filteredCategories.map(category => (
+                <DisplayCard 
+                  key={category.id}
+                  imagem={category.image}
+                  titulo={category.name}
+                  descButton='Ver todos'
+                  classe='tag'
+                  tag={category.tag}
+                />
+              ))
+            )
         )}
       </div>
     </div>

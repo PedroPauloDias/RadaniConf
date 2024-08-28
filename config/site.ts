@@ -5,13 +5,14 @@ export const siteConfig = {
   description: "Confecção de roupa infantil",
   navItems: [
   
-    {
-      label: "Body",
-      href: "/categorias/Body",
-    },
+
     {
       label: "Lançamentos",
       href: "/categorias/Lancamento",
+    },
+    {
+      label: "Body",
+      href: "/categorias/Body",
     },
     {
       label: "Pagão",
@@ -21,6 +22,10 @@ export const siteConfig = {
       label: "Produtos",
       href: "/produtos",
     },    
+    {
+      label: "Sobre",
+      href: "/sobre",
+    },
   ],
   
   navMenuItems: [

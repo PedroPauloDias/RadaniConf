@@ -86,7 +86,7 @@ const LoginForm = () => {
                     <div className="flex flex-col w-full -mt-2 sm:mt-0 ">
                         <MyButton type='submit' onClick={handleVisitorLogin} color='radani2'>Visitante</MyButton>
                     </div  >
-                    <Link href='/register'><p>registre-se</p>            </Link>
+                    {/* <Link href='/register'><p>registre-se</p>            </Link> */}
 
                 </div>
 

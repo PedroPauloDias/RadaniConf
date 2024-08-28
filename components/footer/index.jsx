@@ -25,9 +25,8 @@ export const Footer = () => {
           <div className=' sm:flex sm:flex-col sm:mx-6 '>
             <h2 className='text-foreground-50 mt-4 sm:hidden'>Redes Sociais</h2>
             <div className='flex gap-2 ' >
-              <p><FaSquareFacebook size={20} /></p>
+              <Link href='https://www.instagram.com/radani_confeccoesltda?utm_source=qr&igsh=NWQ3djJsOWhjNHd0 ' target='_blank'><FaSquareFacebook size={20} /></Link>
               <p><FaInstagram size={20} /></p>
-              <p><BsTwitterX size={20} /></p>
             </div>
           </div>
         </div>
