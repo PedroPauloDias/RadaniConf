@@ -53,8 +53,8 @@ export const siteConfig = {
       href: "/categorias",
     },
     {
-      label: "Sobre nós",
-      href: "/about",
+      label: "Sobre Nós",
+      href: "/sobre",
     },
   ],
   links: {
