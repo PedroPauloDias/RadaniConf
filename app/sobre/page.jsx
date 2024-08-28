@@ -2,12 +2,10 @@ import { title } from "@/components/primitives";
 import DefaultLayout from "@/layouts/default";
 import Image from "next/image";
 import banner2 from '../../public/banner2.jpeg'
-import { Navbar } from "@/components/navbar";
 
 export default function Sobre() {
   return (
     <>
-      <Navbar />
       <section className="flex flex-col items-center justify-center gap-4 p-4 py-8 xl:py-10 xl:flex-row xl:gap-16 xl:mt-32">
         <div className=" w-full max-w-2xl  flex items-center justify-center text-white">
           <Image src={banner2} alt="Descrição da imagem" width={1800} height={600} className='rounded-xl mb-8' />
