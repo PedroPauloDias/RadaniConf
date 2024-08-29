@@ -17,7 +17,7 @@ export default function CategoriasPage() {
  
 
   useEffect(() => {
-    if (!session.token) {
+    if (!session) {
       router.push("/login");
     }
     fetchCategories();
