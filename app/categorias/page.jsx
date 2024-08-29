@@ -16,12 +16,11 @@ export default function CategoriasPage() {
   const { session } = useAuth();
  
 
+
   useEffect(() => {
-    if (!session) {
-      router.push("/login");
-    }
+
     fetchCategories();
-  }, [currentPage, session]);
+  }, [currentPage]);
 
 
 

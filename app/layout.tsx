@@ -46,7 +46,6 @@ export default async function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <AutenticationPage>
             <div className="relative flex flex-col h-screen  ">
 
               <main className=" mt-2  flex-grow ">
@@ -59,7 +58,6 @@ export default async function RootLayout({
             <div className="flex gap-2 justify-end mr-4 z-50 fixed bottom-2 right-1  cursor-pointer ">
               <WhatsAppButton />
             </div>
-          </AutenticationPage>
         </Providers>
       </body>
     </html>
