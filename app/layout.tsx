@@ -9,6 +9,7 @@ import { Navbar } from "@/components/navbar";
 import DefaultLayout from "../app/defaultLayout"
 import { dbConnect } from '@/app/lib/mongo';
 import WhatsAppButton from "@/components/whatsAppButton";
+import AutenticationPage from './autentication';
 
 export const metadata: Metadata = {
   title: {
@@ -32,8 +33,9 @@ export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-  }) {
+}) {
   const conn = await dbConnect();
+
   return (
     <html suppressHydrationWarning lang="en">
       <head />
@@ -44,18 +46,20 @@ export default async function RootLayout({
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
-          <div className="relative flex flex-col h-screen  ">
-            
-            <main className=" mt-2  flex-grow ">
-            <DefaultLayout>
-              {children}
-            </DefaultLayout>
-            </main>
+          <AutenticationPage>
+            <div className="relative flex flex-col h-screen  ">
 
-          </div>
+              <main className=" mt-2  flex-grow ">
+                <DefaultLayout>
+                  {children}
+                </DefaultLayout>
+              </main>
+
+            </div>
             <div className="flex gap-2 justify-end mr-4 z-50 fixed bottom-2 right-1  cursor-pointer ">
-          <WhatsAppButton />
-        </div>
+              <WhatsAppButton />
+            </div>
+          </AutenticationPage>
         </Providers>
       </body>
     </html>

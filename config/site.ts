@@ -4,7 +4,6 @@ export const siteConfig = {
   name: "Radani Confecção de roupa infantil",
   description: "Confecção de roupa infantil em Porangaba-SP",
   navItems: [
-  
 
     {
       label: "Lançamentos",

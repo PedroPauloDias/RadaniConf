@@ -1,5 +1,4 @@
 import { title } from "@/components/primitives";
-import DefaultLayout from "@/layouts/default";
 import Image from "next/image";
 import banner2 from '../../public/banner2.jpeg'
 

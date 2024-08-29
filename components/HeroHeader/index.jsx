@@ -10,7 +10,7 @@ import CustomCarousel from './../carousel/index';
 
 export default function HeroHeader() {
   return (
-    <div>
+    <div >
       <CustomCarousel>   
         <div className=" w-full  flex items-center justify-center text-white">
           <Image src={banner1} alt="Descrição da imagem" width={1800} height={600} className='rounded-md ' />

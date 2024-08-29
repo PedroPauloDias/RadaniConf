@@ -4,16 +4,26 @@ import DefaultLayout from '@/layouts/default';
 import CustomSkeleton from '@/components/skeleton';
 import DisplayCard from '@/components/DisplayCard/index';
 import { getAllCategories } from '../../services/categoryService';
-
+import { useRouter } from "next/navigation";
+import useAuth from "../hooks/useAuth";
 export default function CategoriasPage() {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage] = useState(10);
 
+  const router = useRouter();
+  const { session } = useAuth();
+ 
+
   useEffect(() => {
+    if (!session.token) {
+      router.push("/login");
+    }
     fetchCategories();
-  }, [currentPage]);
+  }, [currentPage, session]);
+
+
 
   async function fetchCategories() {
     try {

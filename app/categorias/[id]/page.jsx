@@ -5,6 +5,7 @@ import { getProductsByTag } from '../../../services/categoryService';
 import CustomSkeleton from '@/components/skeleton';
 import CustomCard from '@/components/customCard';
 import MyPagination from '../../../components/myPagination';
+import { useAuth } from '@/app/hooks/useAuth';
 
 export default function Categoria() {
   const { id }  = useParams();
