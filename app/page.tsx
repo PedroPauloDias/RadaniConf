@@ -17,7 +17,6 @@ export default function Home() {
         <CategoriasContainer />
         <ProdutosContainer />
         <LancamentoContainer/>
-        <BigBangContainer />
       </section>
   </>
   );
